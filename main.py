@@ -30,10 +30,8 @@ def get_num_words(text: str) -> int:
 
 def get_char_dict(text: str) -> dict[str, int]:
     chars = {}
-    # ALPHABET = "abcdefghijklmnopqrstuvwxyz"
     for char in text:
         lowered = char.lower()
-        # if lowered in ALPHABET:
         if lowered in chars:
             chars[lowered] += 1
         else:
