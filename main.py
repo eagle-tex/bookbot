@@ -15,16 +15,24 @@ def main():
 
     chars_sorted_list = chars_dict_to_sorted_list(chars_dict)
 
-    print(f"--- Begin report of {book_path} ---")
-    print(f"{num_words} words found in the document")
-    print()
+    # print(f"--- Begin report of {book_path} ---")
+    # print(f"{num_words} words found in the document")
+    # print()
+
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {book_path}...")
+    print("----------- Word Count ----------")
+    print(f"Found {num_words} total words")
+    print("--------- Character Count -------")
 
     for item in chars_sorted_list:
         if not item["char"].isalpha():  # pyright: ignore[reportAny]
             continue
-        print(f"The '{item['char']}' character was found {item['num']} times")
+        # print(f"The '{item['char']}' character was found {item['num']} times")
+        print(f"{item['char']}: {item['num']}")
 
-    print("--- End report ---")
+    # print("--- End report ---")
+    print("============= END ===============")
 
 
 def get_book_text(path: str):
